@@ -13,9 +13,9 @@ class logger():
         #connect and get id here
         pass
 
-def log(logger,data,timestamp=None):
-    if timestamp is None :
-        timestamp = int(time.time())
-    outdata = {"logger":logger.number,"data":data,"timestamp":timestamp}
-    outstring = json.dumps(outdata)
-    urllib.request.urlopen(url,data=urllib.parse.urlencode({"entry":outstring}).encode())
+    def log(self,data,timestamp=None):
+        if timestamp is None :
+            timestamp = int(time.time())
+        outdata = {"logger":self.number,"data":data,"timestamp":timestamp}
+        outstring = json.dumps(outdata)
+        urllib.request.urlopen(self.url,data=urllib.parse.urlencode({"entry":outstring}).encode())
