@@ -6,12 +6,12 @@ import time
 class logger():
     url=None
     number=None
-    def __init__(self,url):
+    datatype=None
+    def __init__(self,url,datatype):
         self.url=url
-        response=urllib.request.urlopen(url,data=urllib.parse.urlencode({"authentication":""}).encode())
+        response=urllib.request.urlopen(url,data=urllib.parse.urlencode({"datatype":datatype}).encode())
         number = int(response.read())
         #connect and get id here
-        pass
 
     def log(self,data,timestamp=None):
         if timestamp is None :
