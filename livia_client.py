@@ -4,12 +4,10 @@ import json
 import time
 
 class logger():
-    url=None
-    number=None
     def __init__(self,url):
-        self.url=url
-        response=urllib.request.urlopen(url,data=urllib.parse.urlencode({"authentication":""}).encode())
-        number = int(response.read())
+        self.url = url
+        response = urllib.request.urlopen(url,data=urllib.parse.urlencode({"authentication":""}).encode())
+        self.number = 5
         #connect and get id here
         pass
 
