@@ -1,4 +1,4 @@
-import livia_client as client
+import livia as client
 import sys
 import time
 import math
