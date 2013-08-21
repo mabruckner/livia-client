@@ -3,7 +3,7 @@ import sys
 import time
 import math
 print("connecting to "+sys.argv[1])
-logger = client.logger(sys.argv[1],"")
+logger = client.logger(sys.argv[1],sys.argv[2])
 print(logger.number)
 count=0
 while True :
