@@ -1,6 +1,7 @@
 *.py[cod]
 *~
 *.swp
+*.json
 # C extensions
 *.so
 
