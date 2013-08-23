@@ -28,8 +28,7 @@ class logger():
         else:
             url = "{}/projects/{}/submit".format(self.url, self.project)
 
-        print("Response:")
-        print(urllib.request.urlopen(url, data=urllib.parse.urlencode(return_object).encode()).read())
+        return urllib.request.urlopen(url, data=urllib.parse.urlencode(return_object).encode()).read()
 
     def save(self,fname):
         fp=open(fname,"w")
