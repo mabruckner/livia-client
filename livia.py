@@ -29,4 +29,4 @@ class logger():
     def load(fname):
         fp=open(fname)
         dat=json.load(fp)
-        return logger(dat["url"],dat["project"],dat["id"],dat["key"])
+        return logger(dat["url"],dat["project"],dat["key"])
